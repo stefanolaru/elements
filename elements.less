@@ -122,6 +122,17 @@
 }
 /* @end */
 
+/* @group FILTERS */
+
+.desaturate(@percent:100%) {
+	-webkit-filter: grayscale(@percent);
+	-moz-filter: grayscale(@percent);
+	-ms-filter: grayscale(@percent);
+	-o-filter: grayscale(@percent);
+}
+
+/* @end */
+
 /* @group TRANSITION */
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
 	-webkit-animation:	@name @duration @delay @ease;
