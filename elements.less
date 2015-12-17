@@ -89,15 +89,6 @@
 /* @end */
 
 /* @group TRANSFORM */
- .opacity(@opacity: 0.5) {
-    -moz-opacity: @opacity;
-    -khtml-opacity: @opacity;
-    -webkit-opacity: @opacity;
-    opacity: @opacity;
-    @opperc: @opacity * 100;
-    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
-    filter: ~"alpha(opacity=@{opperc})";
-}
 .transform(...) {
     -webkit-transform: @arguments;
     -moz-transform: @arguments;
@@ -131,6 +122,31 @@
 	-o-filter: grayscale(@percent);
 }
 
+.blur(@blur:5px) {
+	-webkit-filter: blur(@blur);
+	-moz-filter: blur(@blur);
+	-o-filter: blur(@blur);
+	-ms-filter: blur(@blur);
+	filter: blur(@blur);
+}
+
+.sepia(@percent:100%) {
+	-webkit-filter: sepia(@percent);
+	-moz-filter: sepia(@percent);
+	-ms-filter: sepia(@percent);
+	-o-filter: sepia(@percent);
+	filter: sepia(@percent);
+}
+
+.opacity(@opacity: 0.5) {
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -webkit-opacity: @opacity;
+    opacity: @opacity;
+    @opperc: @opacity * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+    filter: ~"alpha(opacity=@{opperc})";
+}
 /* @end */
 
 /* @group TRANSITION */
